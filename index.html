@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HealthTrack - a simple personal wellness dashboard.">
+    <title>HealthTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a class="logo" href="#dashboard">Health<span>Track</span></a>
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#tracking">Tracking</a>
+            <a href="#tips">Health Tips</a>
+        </nav>
+        <button class="mobile-menu" aria-label="Toggle navigation">☰</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR DAILY HEALTH COMPANION</p>
+                <h1>Take control of <span>your health.</span></h1>
+                <p class="hero-text">
+                    Track hydration, exercise and sleep in one clean dashboard.
+                    Your data stays in this browser.
+                </p>
+                <a href="#tracking" class="button">Start Tracking</a>
+            </div>
+            <div class="hero-card" aria-label="Today's health overview">
+                <div class="hero-card-top">
+                    <span>Today's progress</span>
+                    <strong id="heroScore">0%</strong>
+                </div>
+                <div class="hero-ring">
+                    <div class="ring-inner">
+                        <strong id="heroScoreLarge">0</strong>
+                        <span>health score</span>
+                    </div>
+                </div>
+                <p id="heroMessage">Start with one healthy action today.</p>
+            </div>
+        </section>
+
+        <section id="dashboard" class="section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">OVERVIEW</p>
+                    <h2>Today's Health</h2>
+                </div>
+                <button id="resetBtn" class="secondary-button">Reset today</button>
+            </div>
+
+            <div class="stats">
+                <article class="card">
+                    <div class="card-head">
+                        <div class="icon water">💧</div>
+                        <span>Hydration</span>
+                    </div>
+                    <h3><span id="waterAmount">0</span> <small>/ 8 glasses</small></h3>
+                    <div class="progress"><div id="waterProgress" class="progress-bar"></div></div>
+                    <button class="action-button" id="waterBtn">+ Add glass</button>
+                </article>
+
+                <article class="card">
+                    <div class="card-head">
+                        <div class="icon exercise">🏃</div>
+                        <span>Exercise</span>
+                    </div>
+                    <h3><span id="exerciseAmount">0</span> <small>/ 30 minutes</small></h3>
+                    <div class="progress"><div id="exerciseProgress" class="progress-bar"></div></div>
+                    <button class="action-button" id="exerciseBtn">+ 5 minutes</button>
+                </article>
+
+                <article class="card">
+                    <div class="card-head">
+                        <div class="icon sleep">😴</div>
+                        <span>Sleep</span>
+                    </div>
+                    <h3><span id="sleepAmount">0</span> <small>/ 8 hours</small></h3>
+                    <div class="progress"><div id="sleepProgress" class="progress-bar"></div></div>
+                    <button class="action-button" id="sleepBtn">+ 1 hour</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="tracking" class="section tracking">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR PROGRESS</p>
+                    <h2>Daily Health Score</h2>
+                </div>
+            </div>
+
+            <div class="score-card">
+                <div class="score-circle">
+                    <strong id="healthScore">0</strong>
+                    <span>/ 100</span>
+                </div>
+                <div class="score-copy">
+                    <span class="status-pill" id="statusPill">Getting started</span>
+                    <h3 id="scoreTitle">Build your healthy routine</h3>
+                    <p id="scoreMessage">Add water, exercise and sleep as you go through the day.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">LEARN</p>
+                    <h2>Health Tips</h2>
+                </div>
+            </div>
+
+            <div class="tips">
+                <article class="tip-card">
+                    <span class="tip-icon">💧</span>
+                    <h3>Stay hydrated</h3>
+                    <p>Keep water available throughout the day and drink regularly.</p>
+                </article>
+                <article class="tip-card">
+                    <span class="tip-icon">🏃</span>
+                    <h3>Keep moving</h3>
+                    <p>Break up long periods of sitting with movement and regular activity.</p>
+                </article>
+                <article class="tip-card">
+                    <span class="tip-icon">😴</span>
+                    <h3>Protect your sleep</h3>
+                    <p>A consistent sleep routine can support energy, focus and wellbeing.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <h3>Health<span>Track</span></h3>
+            <p>A simple technology project for tracking everyday wellness habits.</p>
+        </div>
+        <p>© 2026 HealthTrack</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
